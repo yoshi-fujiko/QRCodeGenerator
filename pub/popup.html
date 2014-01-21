@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+<meta charset="utf-8">
+<title>QR Code Generator</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.autosize.min.js"></script>
+<script src="js/qr.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <h1 class="pgTtl">ページタイトル</h1>
+  </header>
+
+  <section class="pgUrlArea">
+    <form>
+      <textarea class="form_textarea qrUrl"></textarea>
+    </form>
+  </section>
+
+  <section class="qrCode">
+    <div class="qrImg"></div>
+    <div class="qrSize">
+      <input type="range" max="2" min="0" step="1" value="1" id="qrsize" class="qrsize">
+    </div>
+  </section>
+
+  <footer class="footer">
+    <nav>
+      <ul class="unstyled menuList"><!--
+        --><li><a href="history.html" class="menuSp history" title="history"></a></li><!--
+        --><!--li><a href="options.html" class="menuSp options" title="option"></a></li--><!--
+      --></ul>
+    </nav>
+  </footer>
+
+</div>
+
+</body>
+</html>

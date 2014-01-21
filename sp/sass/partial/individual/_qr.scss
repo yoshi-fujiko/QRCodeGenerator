@@ -1,0 +1,57 @@
+.wrap {
+	width: 220px;
+	padding: 8px;
+}
+
+.pgTtl {
+	background: no-repeat top left;
+	padding: 2px 0 0 20px;
+	@include background-size(16px 16px);
+}
+
+.pgUrlArea {
+	margin-top: 5px;
+	.qrUrl{
+		line-height: 1.4;
+		resize: none;
+		outline: none 0;
+		word-break: break-all;
+	}
+}
+
+.qrCode {
+	margin-top: 10px;
+	.qrImg {
+		margin: auto;
+		background: url(../img/loader.gif) no-repeat center center;
+	}
+	.qrSize {
+		margin-top: 5px;
+		text-align: center;
+	}
+}
+
+.footer {
+	margin-top: 10px;
+}
+
+.menuList {
+	text-align: right;
+	> li {
+		display: inline-block;
+		margin-left: 5px;
+	}
+	.menuSp {
+		width: 14px;
+		height: 14px;
+		display: block;
+		text-indent: -999px;
+		background: url(../img/sprite.png) no-repeat;
+		&.options {
+			background-position: 0 0;
+		}
+		&.history {
+			background-position: -14px 0;
+		}
+	}
+}
