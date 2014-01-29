@@ -9,7 +9,7 @@ module.exports = (grunt)->
 
     uglify:
       build_pc:
-        files: 'pub/js/qr.min.js': ['pub/js/qr.js']
+        files: 'pub/js/history.min.js': ['pub/js/history.js']
 
     watch:
       css_sp:

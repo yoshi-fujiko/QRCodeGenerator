@@ -1,16 +1,23 @@
+
+.header {
+	border-bottom: solid 1px #ccc;
+	@include box-shadow(rgba(0,0,0,0.1) 0 -1px 1px inset);
+	.inner {
+		padding: 8px;
+	}
+	.pgTtl {
+		background: no-repeat top left;
+		padding: 2px 0 0 20px;
+		@include background-size(16px 16px);
+	}
+}
 .wrap {
 	width: 220px;
 	padding: 8px;
 }
 
-.pgTtl {
-	background: no-repeat top left;
-	padding: 2px 0 0 20px;
-	@include background-size(16px 16px);
-}
-
 .pgUrlArea {
-	margin-top: 5px;
+	padding: 5px 3px 0;
 	.qrUrl{
 		line-height: 1.4;
 		resize: none;
@@ -20,7 +27,6 @@
 }
 
 .qrCode {
-	margin-top: 10px;
 	.qrImg {
 		margin: auto;
 		background: url(../img/loader.gif) no-repeat center center;
@@ -52,6 +58,108 @@
 		}
 		&.history {
 			background-position: -14px 0;
+		}
+	}
+}
+
+/* history */
+.historyWrap {
+	width: 640px;
+	margin: auto;
+	padding: 8px;
+	.heading1 {
+		font-size: 24px;
+		font-weight: bold;
+		color: #0099cc;
+	}
+	.historySec {
+		margin-top: 10px;
+	}
+	.historyList {
+		border: solid 1px #e1e2e3;
+		@include border-radius(5px);
+		.historyItem {
+			border-bottom: solid 1px #e1e2e3;
+			&:last-child {
+				border-bottom: none 0;
+			}
+		}
+	}
+	.historyHead {
+		background: #F2FAFD;
+		padding: 8px;
+		@extend .clearfix;
+		.siteTitle {
+			width: 495px;
+			font-size: 14px;
+			font-weight: bold;
+			float: left;
+			background: no-repeat top left;
+			padding: 0 0 0 20px;
+			@include background-size(16px 16px);
+		}
+		.regDate {
+			width: 110px;
+			font-size: 10px;
+			float: right;
+			padding-top: 2px;
+			text-align: right;
+		}
+	}
+	.siteQr {
+		padding: 8px; 
+		.siteQrImg {
+			float: left;
+			margin-right: 10px;
+		}
+		.siteUri {
+			width: 435px;
+			padding-top: 10px;
+			float: left;
+			word-break: break-all;
+		}
+	}
+	.noLogMsg {
+		text-align: center;
+		padding: 8px;
+	}
+}
+
+.pr {
+	padding: 8px 0 0;
+	.cst {
+		width: 100%;
+		display: block;
+		padding: 6px;
+		border: solid 1px #e1e2e3;
+		@include border-radius(5px);
+		text-decoration: none;
+		display: table;
+		.imgIcon {
+			width: 36px;
+			display: table-cell;
+			border-collapse: collapse;
+			vertical-align: top;
+			.icon {
+				width: 36px;
+				height: 36px;
+				background: url(../img/app.png) no-repeat 0 0;
+				@include background-size(36px 36px);
+				border: solid 1px #e1e2e3;
+				@include border-radius(5px);
+			}
+		}
+		.desc {
+			padding-left: 8px;
+			display: table-cell;
+			border-collapse: collapse;
+		}
+		.title {
+			font-weight: bold;
+			color: #345;
+		}
+		.lead {
+			color: #789;
 		}
 	}
 }
